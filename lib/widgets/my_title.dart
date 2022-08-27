@@ -13,36 +13,44 @@ class MyTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(left: 7),
-              child: Text(
-                "$name",
-                style: const TextStyle(
-                  fontSize: 30,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
+    return Container(
+      height: 20,
+      width: double.infinity,
+      color: Colors.white,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 7),
+                child: Text(
+                  "$name",
+                  style: const TextStyle(
+                    fontSize: 30,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
+              Row(
+                children: [
+                  PowerBadge(text: "fire"),
+                  PowerBadge(text: "Water"),
+                ],
+              ),
+            ],
+          ),
+          Text(
+            "$num",
+            style: TextStyle(
+              color: Colors.white,
             ),
-            Row(
-              children: [
-                PowerBadge(text: "fire"),
-                PowerBadge(text: "Water"),
-              ],
-            ),
-          ],
-        ),
-        Text("$num",
-        style: TextStyle(
-          color: Colors.white,
-        ),),
-      ],
+          ),
+        ],
+      ),
     );
   }
 }

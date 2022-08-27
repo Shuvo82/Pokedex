@@ -7,9 +7,11 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: //DetailsPage()
-        HomePage(),
-        );
-    HomePage();
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home:
+          //DetailsPage()
+          HomePage(),
+    );
   }
 }
